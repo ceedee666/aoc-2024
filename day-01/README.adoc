@@ -1,4 +1,4 @@
-== Day XY
+== Day 01
 
 This solution is written in python.
 
@@ -6,13 +6,19 @@ The following libraries are used to implement the solution:
 
 * Typer (https://typer.tiangolo.com/) to generate a nice command line interface
 * pathlib (https://docs.python.org/3/library/pathlib.html)
+* Counter from collections
 
 === Main idea
 
+Nothing special today. Just parse the input file and split the two lists. For
+the second part the Counter is very useful.
 
 === What did I learn
+
+I learnd how the `*` can be used to unzip lists
+(https://docs.python.org/3/library/functions.html#zip).
 
 === How to run
 
 Run using:
-`$ python day_xy.py --help`
+`$ python day_01.py --help`
