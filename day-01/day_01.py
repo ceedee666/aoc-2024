@@ -1,7 +1,8 @@
+from collections import Counter
 from pathlib import Path
 
+import numpy as np
 import typer
-from collections import Counter
 
 app = typer.Typer()
 
@@ -46,6 +47,18 @@ def part_1(input_file: str):
 def part_2(input_file: str):
     data = read_input_file(input_file)
     print(f"The similarity of the lists is {solve_part_2(data)}")
+
+
+@app.command()
+def numpy(input_file: str):
+    A, B = np.transpose(np.loadtxt(input_file, np.integer))
+    A, B = np.sort(A), np.sort(B)
+
+    distance = np.sum(np.abs(A - B))
+    print(f"The total distance of the lists is {distance}")
+
+    similarity = sum(a * np.sum(B == a) for a in A)
+    print(f"The similarity of the lists is {similarity}")
 
 
 if __name__ == "__main__":
