@@ -1,0 +1,21 @@
+== Day 02
+
+This solution is written in python.
+
+The following libraries are used to implement the solution:
+
+* Typer (https://typer.tiangolo.com/) to generate a nice command line interface
+* pathlib (https://docs.python.org/3/library/pathlib.html)
+
+=== Main idea
+
+Again a quite straight forward puzzel. I simply check if the difference in the
+reportsis stricktly increasing or decreasing. For the second part I simply
+generated all report variants. 
+
+=== What did I learn
+
+=== How to run
+
+Run using:
+`$ python day_02.py --help`
