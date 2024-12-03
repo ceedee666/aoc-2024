@@ -10,7 +10,7 @@ test_string = (
 
 class Testing(TestCase):
     def test_part_1(self):
-        r = day_03.solve_part_1(test_string.split("\n"))
+        r = day_03.solve_part_1(test_string)
 
         self.assertEqual(
             161,
@@ -19,7 +19,7 @@ class Testing(TestCase):
         )
 
     def test_part_2(self):
-        r = day_03.solve_part_2(test_string.split("\n"))
+        r = day_03.solve_part_2(test_string)
 
         self.assertEqual(
             48,
