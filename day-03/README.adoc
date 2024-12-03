@@ -1,0 +1,27 @@
+== Day 03
+
+This solution is written in python.
+
+The following libraries are used to implement the solution:
+
+* Typer (https://typer.tiangolo.com/) to generate a nice command line interface
+* pathlib (https://docs.python.org/3/library/pathlib.html)
+
+=== Main idea
+
+The main idea for part one was to use regex to find the multiplications and to
+use `eval` to execute them. 
+
+For the second I removed everything between `don't()` and `do()` from the
+input. However, first solution did not work. I used a greedy regex
+`don't\(\).*do\(\)`. But this disabled to much of the multiplications. Had to
+change the regex to `don't\(\).*do\(\)` to get the correct solution.
+
+=== What did I learn
+
+
+Greedy vs. Non-Greedy Matching in regex.
+=== How to run
+
+Run using:
+`$ python day_03.py --help`
