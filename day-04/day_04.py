@@ -5,6 +5,8 @@ import typer
 
 app = typer.Typer()
 
+DELTAS = [-1, 0, 1]
+
 
 def read_input_file(input_file_path: str) -> list:
     p = Path(input_file_path)
@@ -16,15 +18,9 @@ def read_input_file(input_file_path: str) -> list:
 
 
 def possible_word_indices(x: int, y: int) -> list[list[tuple[int, int]]]:
-    word_indices = []
-    word_indices.append([(x, y + i) for i in range(4)])
-    word_indices.append([(x, y - i) for i in range(4)])
-    word_indices.append([(x + i, y) for i in range(4)])
-    word_indices.append([(x - i, y) for i in range(4)])
-    word_indices.append([(x + i, y + i) for i in range(4)])
-    word_indices.append([(x - i, y - i) for i in range(4)])
-    word_indices.append([(x + i, y - i) for i in range(4)])
-    word_indices.append([(x - i, y + i) for i in range(4)])
+    word_indices = [
+        [(x + dx * n, y + dy * n) for n in range(4)] for dx in DELTAS for dy in DELTAS
+    ]
     return word_indices
 
 
