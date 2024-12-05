@@ -6,11 +6,17 @@ The following libraries are used to implement the solution:
 
 * Typer (https://typer.tiangolo.com/) to generate a nice command line interface
 * pathlib (https://docs.python.org/3/library/pathlib.html)
+* partial, cmp_to_key from functools
 
 === Main idea
 
+After solving it using some custom logic I got the idea of using `sorted` using
+a custom key function. With this approach the sollution for both parts is
+basically a one liner.
 
 === What did I learn
+
+I learned about the custom key function for `sorted`, again...
 
 === How to run
 

@@ -3,18 +3,51 @@ from unittest import TestCase
 
 import day_05
 
-test_string = """1abc2
-pqr3stu8vwx
-a1b2c3d4e5f
-treb7uchet"""
+test_string = """47|53
+97|13
+97|61
+97|47
+75|29
+61|13
+75|53
+29|13
+97|29
+53|29
+61|53
+97|53
+61|29
+47|13
+75|47
+97|75
+47|61
+75|61
+47|29
+75|13
+53|13
+
+75,47,61,53,29
+97,61,53,29,13
+75,29,13
+75,97,47,61,53
+61,13,29
+97,13,75,29,47"""
 
 
 class Testing(TestCase):
     def test_part_1(self):
-        r = day_05.solve_part_1(test_string.split("\n"))
+        r = day_05.solve(test_string.split("\n"))
 
         self.assertEqual(
-            142,
+            143,
+            r,
+            "The result shoud be correct.",
+        )
+
+    def test_part_2(self):
+        r = day_05.solve(test_string.split("\n"), True)
+
+        self.assertEqual(
+            123,
             r,
             "The result shoud be correct.",
         )
