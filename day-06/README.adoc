@@ -1,4 +1,4 @@
-== Day XY
+== Day 06
 
 This solution is written in python.
 
@@ -9,10 +9,16 @@ The following libraries are used to implement the solution:
 
 === Main idea
 
+The main idea is to represent positions and directiosn using complex numbers.
+The grid is a simple dict. To check for loops I use sets. 
 
 === What did I learn
+
+One needs to be careful with this approach when checking for loops. I initially
+missed to add the psositions after turing the guard to the set of visited
+positions.
 
 === How to run
 
 Run using:
-`$ python day_xy.py --help`
+`$ python day_06.py --help`
