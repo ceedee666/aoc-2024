@@ -15,8 +15,12 @@ def read_input_file(input_file_path: str) -> list:
     return [line.strip() for line in lines]
 
 
+def solve_part_1(data: list[str]) -> int:
+    return 0
+
+
 @app.command()
-def part_1(input_file: str):
+def part_1(input_file: str = "input.txt"):
     data = read_input_file(input_file)
     print(f"The result is....")
 
