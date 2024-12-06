@@ -1,31 +1,28 @@
 import unittest
 from unittest import TestCase
 
-import day_01
+import solution
 
-test_string = """3   4
-4   3
-2   5
-1   3
-3   9
-3   3"""
+test_string = (
+    """xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))"""
+)
 
 
 class Testing(TestCase):
     def test_part_1(self):
-        r = day_01.solve_part_1(test_string.split("\n"))
+        r = solution.solve_part_1(test_string)
 
         self.assertEqual(
-            11,
+            161,
             r,
             "The result shoud be correct.",
         )
 
     def test_part_2(self):
-        r = day_01.solve_part_2(test_string.split("\n"))
+        r = solution.solve_part_2(test_string)
 
         self.assertEqual(
-            31,
+            48,
             r,
             "The result shoud be correct.",
         )

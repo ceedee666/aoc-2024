@@ -1,7 +1,7 @@
 import unittest
 from unittest import TestCase
 
-import day_02
+import solution
 
 test_string = """7 6 4 2 1
 1 2 7 8 9
@@ -13,7 +13,7 @@ test_string = """7 6 4 2 1
 
 class Testing(TestCase):
     def test_part_1(self):
-        r = day_02.solve_part_1(test_string.split("\n"))
+        r = solution.solve_part_1(test_string.split("\n"))
 
         self.assertEqual(
             2,
@@ -22,7 +22,7 @@ class Testing(TestCase):
         )
 
     def test_part_2(self):
-        r = day_02.solve_part_2(test_string.split("\n"))
+        r = solution.solve_part_2(test_string.split("\n"))
 
         self.assertEqual(
             4,

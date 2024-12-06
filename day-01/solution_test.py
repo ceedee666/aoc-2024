@@ -1,35 +1,31 @@
 import unittest
 from unittest import TestCase
 
-import day_04
+import solution
 
-test_string = """MMMSXXMASM
-MSAMXMSMSA
-AMXSXMAAMM
-MSAMASMSMX
-XMASAMXAMM
-XXAMMXXAMA
-SMSMSASXSS
-SAXAMASAAA
-MAMMMXMMMM
-MXMXAXMASX"""
+test_string = """3   4
+4   3
+2   5
+1   3
+3   9
+3   3"""
 
 
 class Testing(TestCase):
     def test_part_1(self):
-        r = day_04.solve_part_1(test_string.split("\n"))
+        r = solution.solve_part_1(test_string.split("\n"))
 
         self.assertEqual(
-            18,
+            11,
             r,
             "The result shoud be correct.",
         )
 
     def test_part_2(self):
-        r = day_04.solve_part_2(test_string.split("\n"))
+        r = solution.solve_part_2(test_string.split("\n"))
 
         self.assertEqual(
-            9,
+            31,
             r,
             "The result shoud be correct.",
         )
