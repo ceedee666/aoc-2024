@@ -15,4 +15,4 @@ The following libraries are used to implement the solution:
 === How to run
 
 Run using:
-`$ python day_xy.py --help`
+`$ python solution.py --help`

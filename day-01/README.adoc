@@ -21,4 +21,4 @@ I learnd how the `*` can be used to unzip lists
 === How to run
 
 Run using:
-`$ python day_01.py --help`
+`$ python solution.py --help`

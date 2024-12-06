@@ -24,4 +24,4 @@ Greedy vs. Non-Greedy Matching in regex.
 === How to run
 
 Run using:
-`$ python day_03.py --help`
+`$ python solution.py --help`

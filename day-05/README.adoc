@@ -21,4 +21,4 @@ I learned about the custom key function for `sorted`, again...
 === How to run
 
 Run using:
-`$ python day_05.py --help`
+`$ python solution.py --help`

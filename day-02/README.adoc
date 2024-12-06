@@ -18,4 +18,4 @@ generated all report variants.
 === How to run
 
 Run using:
-`$ python day_02.py --help`
+`$ python solution.py --help`

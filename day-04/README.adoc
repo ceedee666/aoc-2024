@@ -26,4 +26,4 @@ Copy and past is bad....
 === How to run
 
 Run using:
-`$ python day_04.py --help`
+`$ python solution.py --help`
