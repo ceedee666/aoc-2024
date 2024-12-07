@@ -9,6 +9,7 @@ The following libraries are used to implement the solution:
 
 === Main idea
 
+Just brute forced the solution today. 
 
 === What did I learn
 
