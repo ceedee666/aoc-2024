@@ -28,6 +28,8 @@ def is_possible_equation(equation: tuple[int, list[int]], concat_allowed: bool) 
             )
         else:
             results = [n * r for r in results] + [n + r for r in results]
+
+        results = list(filter(lambda x: x <= r, results))
     return r in results
 
 
