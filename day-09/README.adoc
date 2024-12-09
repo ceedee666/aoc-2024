@@ -1,0 +1,25 @@
+== Day 09
+
+This solution is written in python.
+
+The following libraries are used to implement the solution:
+
+* Typer (https://typer.tiangolo.com/) to generate a nice command line interface
+* pathlib (https://docs.python.org/3/library/pathlib.html)
+
+=== Main idea
+
+I first started working with strings. That worked for the example but not for
+the real input. The reason ist the e.g. 10 has two characters. After realizing
+this is switched to using a list of ints. 
+
+For part 2 I switched to a tuple for representing the blocks. 
+
+=== What did I learn
+
+Numbers can have multiples characters 🤦.
+
+=== How to run
+
+Run using:
+`$ python solution.py --help`
