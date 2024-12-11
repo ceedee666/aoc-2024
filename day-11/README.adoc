@@ -1,0 +1,23 @@
+== Day 11
+
+This solution is written in python.
+
+The following libraries are used to implement the solution:
+
+* Typer (https://typer.tiangolo.com/) to generate a nice command line interface
+* pathlib (https://docs.python.org/3/library/pathlib.html)
+* cache from the functools module (https://docs.python.org/3/library/functools.html)
+
+=== Main idea
+
+For part 1 I used a simple approach to construct a list of stones. Of cause
+this failed for the second part. For the second I noticed that it is possible
+to check individual stones. The result does not depend on the neighbours of the
+stones. Therefore I used a recursive function together with a cache. 
+
+=== What did I learn
+
+=== How to run
+
+Run using:
+`$ python solution.py --help`
