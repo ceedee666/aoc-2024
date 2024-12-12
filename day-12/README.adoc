@@ -1,0 +1,32 @@
+== Day 12
+
+This solution is written in python.
+
+The following libraries are used to implement the solution:
+
+* Typer (https://typer.tiangolo.com/) to generate a nice command line interface
+* pathlib (https://docs.python.org/3/library/pathlib.html)
+
+=== Main idea
+
+To get the regions, I essentially performed a BFS for each position in the grid
+and kept track of the positions that were already visited (i.e., part of
+another region). Each region was represented as a set of complex numbers.
+
+With this data structure, part 1 was straightforward. The area of the region
+was just the size of the set. To calculate the perimeter, I computed, for each
+position, the difference between 4 and the number of neighbors in the region.
+The perimeter is then simply the sum of these values.
+
+The second part was tougher. I essentially performed ray tracing along the rows
+and columns. For each entry or exit, I checked whether, in the previous row (or
+column), the entry or exit was in the same or a different column (or row).
+
+=== What did I learn
+
+I had the correct idea quickly but made lots of small mistakes during
+implementation. Tests helped a lot.
+
+=== How to run
+
+Run using: `$ python solution.py --help`

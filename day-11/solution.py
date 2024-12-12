@@ -63,9 +63,11 @@ def part_1(input_file: str = "input.txt", recursive: bool = True):
 
 
 @app.command()
-def part_2(input_file: str = "input.txt", recursive: bool = True):
+def part_2(input_file: str = "input.txt", recursive: bool = True, iterations: int = 75):
     data = read_input_file(input_file)
-    print(f"There are {solve(data, 75, recursive)} stones after blinking 75 times")
+    print(
+        f"There are {solve(data, iterations, recursive)} stones after blinking {iterations} times"
+    )
 
 
 if __name__ == "__main__":
