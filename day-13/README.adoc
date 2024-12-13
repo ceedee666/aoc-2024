@@ -1,0 +1,21 @@
+== Day 13
+
+This solution is written in python.
+
+The following libraries are used to implement the solution:
+
+* Typer (https://typer.tiangolo.com/) to generate a nice command line interface
+* pathlib (https://docs.python.org/3/library/pathlib.html)
+* re (https://docs.python.org/3/library/re.html)
+
+=== Main idea
+
+Solved the first part by just trying all possible combinations. Of cause, as
+expected, that fails for part two. For part two I solved the equations for the
+number of button presses (`na` and `nb`).
+
+=== What did I learn
+
+=== How to run
+
+Run using: `$ python solution.py --help`
