@@ -1,0 +1,26 @@
+== Day 14
+
+This solution is written in python.
+
+The following libraries are used to implement the solution:
+
+* Typer (https://typer.tiangolo.com/) to generate a nice command line interface
+* pathlib (https://docs.python.org/3/library/pathlib.html)
+* re (https://docs.python.org/3/library/re.html)
+
+=== Main idea
+
+The first part again was easy. I simply represented the coordinates as complex
+numbers and executed the movements. This did not work for the second part. So I
+refactored my solution to solve the movements recursively. First I check in
+`can_move` if a grid element can be moved. If it is possible I execute the move
+in the `move` function.
+
+=== What did I learn
+
+Recursion can be hard. Implementing a visualization helped me to solve all my
+stupid little bugs.
+
+=== How to run
+
+Run using: `$ python solution.py --help`
