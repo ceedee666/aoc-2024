@@ -1,0 +1,23 @@
+== Day 16
+
+This solution is written in python.
+
+The following libraries are used to implement the solution:
+
+* Typer (https://typer.tiangolo.com/) to generate a nice command line interface
+* pathlib (https://docs.python.org/3/library/pathlib.html)
+* defaultdict form the collections module
+* heapq 
+
+=== Main idea
+
+First part was a straight forward implementation of Dijkstra's algorithm
+(https://en.wikipedia.org/wiki/Dijkstra's_algorithm). I really struggled with
+part 2. Finally made it work....
+
+=== What did I learn
+
+
+=== How to run
+
+Run using: `$ python solution.py --help`
