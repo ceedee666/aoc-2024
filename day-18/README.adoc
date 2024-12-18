@@ -6,17 +6,13 @@ The following libraries are used to implement the solution:
 
 * Typer (https://typer.tiangolo.com/) to generate a nice command line interface
 * pathlib (https://docs.python.org/3/library/pathlib.html)
-* defaultdict form the collections module
-* re for regular expressions 
-
+* heapq 
+ 
 === Main idea
 
-First part was a straight forward implementation of the different operations.
-
-For the second part I needed to check reddit to get an idea. Afterwards I
-implemented a solution that created the correct input step by step. The
-important idea is that 3 bits of register A are responsible for the one value
-in the output. 
+Nice simple puzzle today. Fist part can be solved by using Dijkstra algorithm.
+for the second part I simply increased the numebr of corruped bytes by one and
+  re-ran the first part. Quite slow (about 10s) but worked on the first try.
 
 === What did I learn
 

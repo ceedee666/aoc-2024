@@ -15,21 +15,32 @@ def read_input_file(input_file_path: str) -> list[str]:
     return [line.strip() for line in lines]
 
 
-def parse(
-    data: list[str], width: int, height: int, steps: int
-) -> tuple[dict[complex, str], list[complex]]:
-    grid = {(i + 1j * j): "" for j in range(height) for i in range(width)}
-    corrupted = [d.split(",") for d in data]
-    corrupted = [(int(c[0]) + 1j * int(c[1])) for c in corrupted]
-    for i in range(steps):
-        grid[corrupted[i]] = "#"
-    return grid, corrupted
+def parse(data: list[str]) -> list[complex]:
+    bytes = [d.split(",") for d in data]
+    bytes = [(int(c[0]) + 1j * int(c[1])) for c in bytes]
+    return bytes
 
 
-def shortest_path(
-    grid: dict[complex, str], start: complex = 0 + 1j * 0, end: complex = 70 + 1j * 70
+def initialize_memory(width: int, height: int) -> dict[complex, str]:
+    return {(i + 1j * j): "" for j in range(height) for i in range(width)}
+
+
+def corrupt_memory(
+    memory: dict[complex, str], bytes: list[complex], num_of_bytes: int
+) -> dict[complex, str]:
+    corrupted_memory = memory.copy()
+
+    for i in range(num_of_bytes):
+        corrupted_memory[bytes[i]] = "#"
+
+    return corrupted_memory
+
+
+def shortest_paths(
+    grid: dict[complex, str], end: complex = 70 + 1j * 70
 ) -> dict[complex, int]:
     directions = [1, -1, 1j, -1j]
+    start = 0 + 1j * 0
 
     pq = []
     heappush(pq, (0, start))
@@ -60,9 +71,36 @@ def solve(
     steps: int = 1024,
     end: complex = 70 + 1j * 70,
 ) -> int:
-    grid, _ = parse(data, width, height, steps)
-    dists = shortest_path(grid)
+    bytes = parse(data)
+    memory = initialize_memory(width, height)
+    memory = corrupt_memory(memory, bytes, steps)
+    dists = shortest_paths(memory, end)
     return dists[end] if end in dists else -1
+
+
+def solve_2(
+    data: list[str],
+    width: int = 71,
+    height: int = 71,
+    steps: int = 1024,
+    end: complex = 70 + 1j * 70,
+) -> tuple[int, int]:
+    bytes = parse(data)
+    i = steps
+    path_blocked = False
+
+    while not path_blocked:
+        memory = initialize_memory(width, height)
+        memory = corrupt_memory(memory, bytes, i)
+        dists = shortest_paths(memory, end)
+
+        if end not in dists:
+            path_blocked = True
+        else:
+            i += 1
+
+    pos = bytes[i - 1]
+    return int(pos.real), int(pos.imag)
 
 
 @app.command()
@@ -74,20 +112,7 @@ def part_1(input_file: str = "input.txt"):
 @app.command()
 def part_2(input_file: str = "input.txt"):
     data = read_input_file(input_file)
-    _, corruptes = parse(data, 0, 0, 0)
-
-    path_blocked = False
-    i = 1024
-    while not path_blocked:
-        dist = solve(data, steps=i)
-        if dist == -1:
-            path_blocked = True
-        else:
-            i += 1
-
-    pos = corruptes[i - 1]
-
-    print(f"The fist coordinate blocking the path is {int(pos.real)},{int(pos.imag)})")
+    print(f"The fist coordinate blocking the path is {solve_2(data)}")
 
 
 if __name__ == "__main__":

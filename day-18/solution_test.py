@@ -42,6 +42,17 @@ class Testing(TestCase):
             "The result shoud be correct.",
         )
 
+    def test_part_2(self):
+        r = solution.solve_2(
+            test_string.split("\n"), width=7, height=7, steps=12, end=6 + 1j * 6
+        )
+
+        self.assertEqual(
+            (6, 1),
+            r,
+            "The result shoud be correct.",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
