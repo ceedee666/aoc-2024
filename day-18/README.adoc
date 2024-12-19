@@ -1,4 +1,4 @@
-== Day 17
+== Day 18
 
 This solution is written in python.
 

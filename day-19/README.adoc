@@ -1,0 +1,24 @@
+== Day 19
+
+This solution is written in python.
+
+The following libraries are used to implement the solution:
+
+* Typer (https://typer.tiangolo.com/) to generate a nice command line interface
+* pathlib (https://docs.python.org/3/library/pathlib.html)
+* cache functions from functools
+ 
+=== Main idea
+
+Implemented a recursive solution first. Ran very slowly without caching. So I
+switched to a dynamic programming solution. For part two i switched back to a
+recursive approach as I had no better idea. As soon as I used the cache it was
+reasonably fast. 
+
+=== What did I learn
+
+Should try caching to improve performance before trying a different approach. 
+
+=== How to run
+
+Run using: `$ python solution.py --help`
