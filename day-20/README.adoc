@@ -1,0 +1,26 @@
+== Day 20
+
+This solution is written in python.
+
+The following libraries are used to implement the solution:
+
+* Typer (https://typer.tiangolo.com/) to generate a nice command line interface
+* pathlib (https://docs.python.org/3/library/pathlib.html)
+* combinations from itertools
+* heapq 
+
+=== Main idea
+
+Brute force for part 1. Simply created all possible mazes and calculated the
+path lenght. Obviously this is not working for part 2.
+
+For part 2 I calculated the manhatten distance for all possible pairs on the
+path. If the initial distance is lager then the manhatten distance we found a
+cheat.
+
+=== What did I learn
+
+
+=== How to run
+
+Run using: `$ python solution.py --help`
