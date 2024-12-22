@@ -1,0 +1,25 @@
+== Day 22
+
+This solution is written in python.
+
+The following libraries are used to implement the solution:
+
+* Typer (https://typer.tiangolo.com/) to generate a nice command line interface
+* pathlib (https://docs.python.org/3/library/pathlib.html)
+* pairwise from itertools
+* defaultdict from collections
+
+=== Main idea
+
+First part was the straight forward implementation of the rules. For the second
+part I build a dict of seen patterns. I took me about ab hour to find out that
+the example string between part one and two changes. I was rewriting the
+program 10 times and never understood why the tests failed...
+
+=== What did I learn
+
+Better double check your tests not only the production code.
+
+=== How to run
+
+Run using: `$ python solution.py --help`
