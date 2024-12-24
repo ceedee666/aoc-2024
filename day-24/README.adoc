@@ -1,0 +1,30 @@
+== Day 24
+
+This solution is written in python.
+
+The following libraries are used to implement the solution:
+
+* Typer (https://typer.tiangolo.com/) to generate a nice command line interface
+* pathlib (https://docs.python.org/3/library/pathlib.html)
+
+=== Main idea
+
+Part one is simply a simulation of the circuit. For part two I had to read
+reddit and Wikipedia a lot. Turns out that if we assume the circuit is a
+ripple-carry-adder
+(https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) we can check the 
+following rules and find the wrong wires:
+
+1. If an XOR gate has x and y-wires as input, the output cannot be a z-wire.
+2. The output of all other XOR gates must be a z-wire.
+3. All AND gates must be connected to OR gates.
+4. The output of an XOR gate cannot be connected to an OR gate.
+
+
+=== What did I learn
+
+I have to read up on basic logic circuits again!
+
+=== How to run
+
+Run using: `$ python solution.py --help`
